@@ -1,0 +1,5 @@
+Question ID,Compliance Domain,Control Question,Vendor Response,Risk Impact,Validation Evidence Required
+TPRM-001,Data Encryption,Is all customer and regulatory data encrypted both in transit (TLS 1.3) and at rest (AES-256)?,Yes - Fully Compliant,Low,Provide current cryptographic configuration policies and KMS architecture maps.
+TPRM-002,Access Control,Does your platform support centralized identity integration via SAML/SSO and enforce mandatory Multi-Factor Authentication (MFA)?,Yes - Fully Compliant,Low,Provide screenshots of IAM configuration console or identity provider metadata files.
+TPRM-003,Software Supply Chain,Do you provide a continuously updated Software Bill of Materials (SBOM) for all application dependencies to track vulnerabilities?,Partial - Manual Export,Medium,Provide a sample cycloneDX or SPDX formatted SBOM from your latest production build.
+TPRM-004,Business Continuity,Does your organization test your disaster recovery playbooks using tabletop simulations or active failover drills at least annually?,Yes - Fully Compliant,Low,Provide the executive summary of the most recent third-party BCDR audit or tabletop sign-off sheet.
