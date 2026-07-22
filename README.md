@@ -38,3 +38,5 @@ graph TD
     class C sec;
     class D,E it;
 ```
+
+> *Architecture Note: This diagram outlines the unidirectional security boundary separating the high security nuclear plant OT environment from the corporate Splunk SIEM via hardware data diodes.*
