@@ -39,7 +39,7 @@ graph TD
     class D,E it;
 ```
 
-> *Architecture Note: This diagram outlines the unidirectional security boundary separating the high security nuclear plant OT environment from the corporate Splunk SIEM via hardware data diodes.*
+- *Step B: Unidirectional Telemetry & SIEM Aggregation* : To satisfy NRC requirements preventing any external remote intrusion, the architecture enforces a strict hardware isolation boundary. The [Tenable OT Security Passive Monitor](https://github.com/ShadowSkillZ/nuclear-cyber-risk-management/blob/main/README.md#-nuclear-architecture-data-diode--siem-flow) captures deep-packet telemetry and auth logs from the high-security reactor control endpoints without injecting active probes. This data is transmitted outward through a [Data Diode Gateway](https://github.com/ShadowSkillZ/nuclear-cyber-risk-management/blob/main/README.md#-nuclear-architecture-data-diode--siem-flow) via a physical unidirectional fiber link, ensuring zero inbound return path. On the corporate side, a secure log relay uses a [Zero Trust Proxy](https://github.com/ShadowSkillZ/nuclear-cyber-risk-management/blob/main/README.md#-nuclear-architecture-data-diode--siem-flow) to ingest the traffic into the [Central Splunk SIEM Cluster](https://github.com/ShadowSkillZ/nuclear-cyber-risk-management/blob/main/README.md#-nuclear-architecture-data-diode--siem-flow) for continuous cross-zone threat correlation, anomaly detection, and incident response tracking—all without compromising plant safety.
 
 
 
