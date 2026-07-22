@@ -40,3 +40,19 @@ graph TD
 ```
 
 > *Architecture Note: This diagram outlines the unidirectional security boundary separating the high security nuclear plant OT environment from the corporate Splunk SIEM via hardware data diodes.*
+
+
+
+## 🕵️‍♂️ Research Methodology & Source Validation
+This section outlines the public data curation workflow:
+
+### 1. Source Discovery & Regulatory Aggregation
+*   **Nuclear Digital Controls (10 CFR 73.54)**: Sourced directly from the official **U.S. Nuclear Regulatory Commission (NRC)** public document collections. This rule mandates that cyber attacks cannot cause radiological sabotage or compromise safety-related plant functions.
+*   **Bulk Electric Protections (NERC CIP)**: Core guidelines extracted from the open **North American Electric Reliability Corporation (NERC)** standards library. Focus was placed specifically on **CIP-008-6** (Incident Reporting) and **CIP-013-3** (Supply Chain Risk Management) to address modern third party software vulnerability threats.
+*   **Industrial Control Guidance (NIST SP 800-82)**: Cross-referenced with the **National Institute of Standards and Technology** open source SP 800-82 guide, specifically analyzing security architectures for air gapped zones and unidirectional data flows.
+
+### 2. Operational Translation Process (Real-World Application)
+To apply these massive federal documents to a simulated clean energy tech environment, the following real world implementation logic was used:
+*   **Step A: Asset Identification**: Before applying controls, assets are categorized as either **Information Technology (IT)** or **Critical Digital Assets (CDAs)** in the Operational Technology (OT) domain. 
+*   **Step B: Flow Isolation via Data Diodes**: To satisfy NRC requirements that plant data cannot be maliciously modified from the outside, the architecture implements a physical hardware **Data Diode**. This allows real time health telemetry to flow outward to an enterprise **Splunk SIEM** for analysis, but physically blocks inbound packets from entering the reactor control network.
+*   **Step C: Supply Chain Ingestion (SBOMs)**: To address NERC CIP-013 requirements, vendor software is passed through an automated dependency analysis pipeline to evaluate its **Software Bill of Materials (SBOM)** before deployment, shifting third party risk analysis from a paperwork exercise to a technical review.
