@@ -18,9 +18,9 @@ An advanced cybersecurity risk portfolio detailing critical infrastructure prote
 ```mermaid
 graph TD
     %% Define styles
-    classDef ot fill:#ff9999,stroke:#333,stroke-width:2px;
-    classDef it fill:#99ccff,stroke:#333,stroke-width:2px;
-    classDef sec fill:#ffff99,stroke:#333,stroke-width:2px;
+    classDef ot fill:#ff9999,stroke:#333,stroke-width:2px,color:#fff;
+classDef it fill:#99ccff,stroke:#333,stroke-width:2px,color:#fff;
+classDef sec fill:#ffff99,stroke:#333,stroke-width:2px,color:#fff;
 
     subgraph OT_Control_Network [Nuclear Plant OT Network - High Security]
         A[Control Room Endpoints] -->|Auth Logs| B(Tenable OT Security Passive Monitor)
