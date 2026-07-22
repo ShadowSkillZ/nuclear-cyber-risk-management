@@ -10,7 +10,9 @@ An advanced cybersecurity risk portfolio detailing critical infrastructure prote
 
 ## 📁 Repository Structure
 *   📊 `2026_assessment.csv`: Interactive threat gap matrix detailing asset scanning and software provenance deficiencies.
-*   🗄️ `register.json`: Machine-readable risk ledger database scoring inherent versus residual risk metrics.
+*   🗄️ `register.json`: Machine readable risk ledger database scoring inherent versus residual risk metrics.
+
+*  📋 `vendor_caiq_assessment.csv` : A structured Vendor Security Assessment modeled after industry standard Consensus Assessments Initiative Questionnaires (CAIQ).
 
 ## 📐 Nuclear Architecture Data Diode & SIEM Flow
 ```mermaid
@@ -40,7 +42,8 @@ graph TD
 ```
 
 
-- * Unidirectional Telemetry & SIEM Aggregation* : To satisfy NRC requirements preventing any external remote intrusion, the architecture enforces a strict hardware isolation boundary. The [Tenable OT Security Passive Monitor](https://github.com/ShadowSkillZ/nuclear-cyber-risk-management/blob/main/README.md#-nuclear-architecture-data-diode--siem-flow) captures deep-packet telemetry and auth logs from the high security reactor control endpoints without injecting active probes. This data is transmitted outward through a [Data Diode Gateway](https://github.com/ShadowSkillZ/nuclear-cyber-risk-management/blob/main/README.md#-nuclear-architecture-data-diode--siem-flow) via a physical unidirectional fiber link, ensuring zero inbound return path. On the corporate side, a secure log relay uses a [Zero Trust Proxy](https://github.com/ShadowSkillZ/nuclear-cyber-risk-management/blob/main/README.md#-nuclear-architecture-data-diode--siem-flow) to ingest the traffic into the [Central Splunk SIEM Cluster](https://github.com/ShadowSkillZ/nuclear-cyber-risk-management/blob/main/README.md#-nuclear-architecture-data-diode--siem-flow) for continuous cross-zone threat correlation, anomaly detection, and incident response tracking all without compromising plant safety.
+Unidirectional Telemetry & SIEM Aggregation: To satisfy NRC requirements preventing any external remote intrusion, the architecture enforces a strict hardware isolation boundary. The Tenable OT Security Passive Monitor captures deep packet telemetry and auth logs from the high security reactor control endpoints without injecting active probes. This data is transmitted outward through a Data Diode Gateway via a physical unidirectional fiber link, ensuring zero inbound return path. On the corporate side, a secure log relay uses a Zero Trust Proxy to ingest the traffic into the Central Splunk SIEM Cluster for continuous cross-zone threat correlation, anomaly detection, and incident response tracking all without compromising plant safety.
+
 
 
 
