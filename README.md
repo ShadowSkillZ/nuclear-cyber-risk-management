@@ -11,3 +11,30 @@ An advanced cybersecurity risk portfolio detailing critical infrastructure prote
 ## 📁 Repository Structure
 *   📊 `2026_assessment.csv`: Interactive threat gap matrix detailing asset scanning and software provenance deficiencies.
 *   🗄️ `register.json`: Machine-readable risk ledger database scoring inherent versus residual risk metrics.
+
+## 📐 Nuclear Architecture Data Diode & SIEM Flow
+```mermaid
+graph TD
+    %% Define styles
+    classDef ot fill:#ff9999,stroke:#333,stroke-width:2px;
+    classDef it fill:#99ccff,stroke:#333,stroke-width:2px;
+    classDef sec fill:#ffff99,stroke:#333,stroke-width:2px;
+
+    subgraph OT_Control_Network [Nuclear Plant OT Network - High Security]
+        A[Control Room Endpoints] -->|Auth Logs| B(Tenable OT Security Passive Monitor)
+    end
+    
+    subgraph Air_Gap_Isolation [Hardware Isolation Protocol]
+        B -->|Unidirectional Fiber Link| C[Data Diode Gateway]
+    end
+
+    subgraph Corporate_IT_Network [Enterprise Network Environment]
+        C -->|Secure Log Relay| D[(Central Splunk SIEM Cluster)]
+        E[MFA Authenticated Vendor Session] -->|Zero Trust Proxy| D
+    end
+
+    %% Apply Styles
+    class A,B ot;
+    class C sec;
+    class D,E it;
+```
