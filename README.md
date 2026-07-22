@@ -13,6 +13,8 @@ An advanced cybersecurity risk portfolio detailing critical infrastructure prote
 *   🗄️ `register.json`: Machine readable risk ledger database scoring inherent versus residual risk metrics.
 
 *  📋 `vendor_caiq_assessment.csv` : A structured Vendor Security Assessment modeled after industry standard Consensus Assessments Initiative Questionnaires (CAIQ).
+*  📉 `dr_emergency_strategy.md`: A technical strategy blueprint detailing data replication tiers and automated failover pipelines.
+
 
 ## 📐 Nuclear Architecture Data Diode & SIEM Flow
 ```mermaid
