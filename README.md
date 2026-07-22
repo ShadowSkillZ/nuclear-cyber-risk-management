@@ -1,6 +1,6 @@
 # ⚛️ Nuclear Cybersecurity Risk Framework & Portfolio Simulation
 
-An advanced cybersecurity risk portfolio detailing critical infrastructure protections tailored to commercial clean energy and nuclear generation plants. This repository models cross-functional technical compliance tracking frameworks across Risk & Audits, Software Supply Chain Vetting, and Industrial BCDR Planning.
+An advanced cybersecurity risk portfolio detailing critical infrastructure protections tailored to commercial clean energy and nuclear generation plants. This repository models cross functional technical compliance tracking frameworks across Risk & Audits, Software Supply Chain Vetting, and Industrial BCDR Planning.
 
 ## 📜 Regulatory Standards Mapping
 *   **10 CFR 73.54**: Protection of digital computer and communication systems.
