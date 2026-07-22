@@ -17,18 +17,18 @@ An external software component utilized within the vendor platform modifies crit
 ## 📋 Phasewise Response Matrix
 
 ### Phase 1: Triage & Structural Isolation
-*   **Immediate Action**: Activate the Incident Response Team (IRT) and pivot the operation to an emergency stand-by state.
+*   **Immediate Action**: Activate the Incident Response Team (IRT) and pivot the operation to an emergency stand by state.
 *   **OT Containment**: Disconnect the corporate IT active directories from the plant control layer proxy. Verify that the hardware **Data Diode** continues running in a strictly unidirectional state to prevent reverse packet traversal.
 *   **Evidence Collection**: Take full forensic memory snapshots of the affected workstations before initiating system reboots.
 
 ### Phase 2: Vulnerability Analysis (Tenable & Splunk)
-*   **Splunk Correlation**: Run high-priority searches tracking the lateral movement of user authentication tokens. Map the root malicious execution vector to anomalous vendor service account sessions.
+*   **Splunk Correlation**: Run high priority searches tracking the lateral movement of user authentication tokens. Map the root malicious execution vector to anomalous vendor service account sessions.
 *   **Tenable Assessment**: Validate the patch posture of backup servers to ensure the payload cannot spread to isolated cold-standby configurations.
 
 ### Phase 3: Failover & Recovery Operations
 *   **Cold Standby Activation**: Boot up the air-gapped, immutable infrastructure baseline configurations stored on write-once media.
-*   **RPO Verification**: Re-ingest backup telemetry data up to the 03:45 EST milestone checkpoint. Verify that data loss does not exceed the target 15-minute barrier.
-*   **RTO Validation**: Confirm that primary plant safety telemetry screens are fully functional and reporting real-time data within the 115-minute mark.
+*   **RPO Verification**: Re-ingest backup telemetry data up to the 03:45 EST milestone checkpoint. Verify that data loss does not exceed the target 15 minute barrier.
+*   **RTO Validation**: Confirm that primary plant safety telemetry screens are fully functional and reporting real-time data within the 115 minute mark.
 
 ---
 
