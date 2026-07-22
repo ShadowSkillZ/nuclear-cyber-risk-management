@@ -1,0 +1,22 @@
+[
+  {
+    "risk_id": "RISK-001",
+    "focus_area": "Vendor Deploy / Software Vetting",
+    "regulatory_alignment": "NERC CIP-003-9 / CIP-015",
+    "inherent_risk": { "likelihood": 3, "impact": 5, "rating": "High" },
+    "description": "Third-party contractors utilized to monitor core digital assets utilize standing, unmonitored external VPN tunnels to push adjustments.",
+    "mitigation_strategy": "Transition the infrastructure to an explicit, zero-standing-privilege framework. Enforce time-bounded, centrally revocable remote access sessions backed by mandatory MFA. Deploy Internal Network Security Monitoring (INSM) to log and analyze all vendor sessions in real time.",
+    "residual_risk": { "likelihood": 1, "impact": 5, "rating": "Low" },
+    "risk_owner": "Director of Infrastructure Security / Lead Compliance Analyst"
+  },
+  {
+    "risk_id": "RISK-002",
+    "focus_area": "Risk & Audits / System Telemetry",
+    "regulatory_alignment": "10 CFR 73.54, NIST SP 800-53 (AU Family)",
+    "inherent_risk": { "likelihood": 4, "impact": 3, "rating": "Medium" },
+    "description": "Industrial control endpoints do not report authentication telemetry or system alert events to the central security team.",
+    "mitigation_strategy": "Implement unidirectional data gateways (data diodes) to securely pass system event logs outward from the OT environment to a centralized, air-gapped Splunk SIEM cluster without permitting data back-feed channels.",
+    "residual_risk": { "likelihood": 1, "impact": 3, "rating": "Low" },
+    "risk_owner": "Senior Security Systems Architect"
+  }
+]
